@@ -1,11 +1,10 @@
-public class Ball {
-    private Point2D     location;
+public class Ball extends GameObject {
     private int			direction;
     private int 		speed;
     private boolean 	isBeingHeld;
 
     public Ball(Point2D loc) {
-        location = loc;
+        super(loc);
         direction = 0;
         speed = 0;
         isBeingHeld = false;
@@ -13,12 +12,9 @@ public class Ball {
 
     // The get/set methods
     public Point2D getLocation() { return location; }
-    public int getDirection() { return direction; }
-    public int getSpeed() { return speed; }
+
     public boolean isBeingHeld() { return isBeingHeld; }
-    public void setLocation(Point2D newLocation) { location = newLocation; }
-    public void setDirection(int newDirection) { direction = newDirection; }
-    public void setSpeed(int newSpeed) { speed = newSpeed; }
+
     public void setIsBeingHeld(boolean newHoldStatus) { isBeingHeld = newHoldStatus; }
 
     public String toString() {
