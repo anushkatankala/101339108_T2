@@ -1,4 +1,4 @@
-public class Trap extends GameObject {
+public class Trap extends StationaryObject {
 
     public Trap(Point2D loc) {
         super(loc);

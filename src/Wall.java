@@ -1,4 +1,4 @@
-public class Wall extends GameObject{
+public class Wall extends StationaryObject{
     private int		    width;
     private int		    height;
 
@@ -11,6 +11,8 @@ public class Wall extends GameObject{
     // The get/set methods
     public int getWidth() { return width; }
     public int getHeight() { return height; }
+
+
 
     public String toString() {
         return "Wall" + " at (" + (int)location.getX() + "," + (int)location.getY() + ") with width " +

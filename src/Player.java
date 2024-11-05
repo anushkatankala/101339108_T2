@@ -1,18 +1,12 @@
 import java.awt.Color;
-public class Player extends GameObject{
-    private int			direction;
-    private int 		speed;
+public class Player extends MovableObject{
     private String		name;
     private Color       color;
     private boolean 	hasBall;
     private int	 		score;
 
-
-
     public Player(String n, Color c, Point2D loc, int dir) {
-        super(loc);
-        direction = dir;
-        speed = 0;
+        super(dir, 0, loc);
         name = n;
         color = c;
         hasBall = false;
@@ -32,5 +26,29 @@ public class Player extends GameObject{
         if (hasBall)
             s += " with the ball";
         return s;
+    }
+
+    public void draw(){
+        System.out.println("Player is at " + getLocation() + " facing " + getLocation() + " and moving at " + getSpeed() + " pixels per second." );
+    }
+
+    @Override
+    public void update() {
+        switch (this.direction){
+            case 0:
+                location.setX(location.getX() + getSpeed());
+                break;
+            case 180:
+                location.setX(location.getX() - getSpeed());
+                break;
+            case 90:
+                location.setY(location.getY() + getSpeed());
+                break;
+            case 270:
+                location.setY(location.getY() - getSpeed());
+                break;
+        }
+
+        this.draw();
     }
 }

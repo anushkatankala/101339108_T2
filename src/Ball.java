@@ -1,12 +1,9 @@
-public class Ball extends GameObject {
-    private int			direction;
-    private int 		speed;
+public class Ball extends MovableObject {
+
     private boolean 	isBeingHeld;
 
     public Ball(Point2D loc) {
-        super(loc);
-        direction = 0;
-        speed = 0;
+        super(0, 0, loc);
         isBeingHeld = false;
     }
 
@@ -20,5 +17,33 @@ public class Ball extends GameObject {
     public String toString() {
         return "Ball" + " at (" + (int)location.getX() + "," + (int)location.getY() + ") facing " + direction +
                 " degrees going " + speed + " pixels per second";
+    }
+
+    public void draw(){
+        System.out.println("Ball is at " + getLocation() + " facing " + getLocation() + " and moving at " + getSpeed() + " pixels per second." );
+    }
+
+    @Override
+    public void update() {
+        if (getSpeed() > 0){
+
+            switch (this.direction){
+                case 0:
+                    location.setX(location.getX() + getSpeed());
+                    break;
+                case 180:
+                    location.setX(location.getX() - getSpeed());
+                    break;
+                case 90:
+                    location.setY(location.getY() + getSpeed());
+                    break;
+                case 270:
+                    location.setY(location.getY() - getSpeed());
+                    break;
+            }
+            setSpeed(getSpeed() - 1);
+        }
+
+        this.draw();
     }
 }

@@ -33,5 +33,25 @@ public class GameTestProgram {
 
         System.out.println("Here are the Game Objects:");
         g.displayObjects();
+
+        //Player player1 = new Player("hello", Color.PINK, new Point2D(100,100), 69);
+        //g.add(player1);
+        //player1.draw();
+
+        Player player = new Player("Red Player", Color.RED, new Point2D(100,100),0);
+        player.speed = 10;
+        player.direction = 0;
+        g.add(player);
+        Ball ball = new Ball(new Point2D(100,100));
+        ball.speed = 10;
+        ball.direction = 0;
+        g.add(ball);
+        player.update();
+        player.update();
+        player.update();
+        ball.update();
+        ball.update();
+        ball.update();
+
     }
 }

@@ -1,4 +1,4 @@
-public class Prize extends GameObject {
+public class Prize extends StationaryObject {
     private int 	    value;
 
     public Prize(Point2D loc, int val) {

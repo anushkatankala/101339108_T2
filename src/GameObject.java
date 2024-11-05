@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class GameObject {
+public abstract class GameObject {
 
     protected Point2D location;
 
@@ -11,5 +11,7 @@ public class GameObject {
     //get/set methods
     public Point2D getLocation() { return location; }
     public void setLocation(Point2D newLocation) { location = newLocation; }
+
+    public abstract void update();
 
 }
