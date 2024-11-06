@@ -26,4 +26,13 @@ public class Game {
         for (int i=0; i<objectCount; i++)
             System.out.println(gameObjects[i]);
     }
+
+    public void updateObjects(){
+        for (Object obj : gameObjects){
+            if (obj != null){
+                obj.u
+            }
+
+        }
+    }
 }
