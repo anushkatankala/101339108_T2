@@ -29,7 +29,7 @@ public class Player extends MovableObject{
     }
 
     public void draw(){
-        System.out.println("Player is at " + getLocation() + " facing " + getLocation() + " and moving at " + getSpeed() + " pixels per second." );
+        System.out.println("Player is at " + getLocation() + " facing " + getDirection() + " degrees and moving at " + getSpeed() + " pixels per second." );
     }
 
     @Override

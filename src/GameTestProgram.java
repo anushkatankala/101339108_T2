@@ -29,7 +29,7 @@ public class GameTestProgram {
         g.add(new Player("Green Person", Color.GREEN, new Point2D(147,116), 0));
 
         // Add the ball
-        g.add(new Ball(new Point2D(90, 90)));
+        //g.add(new Ball(new Point2D(90, 90)));
 
         System.out.println("Here are the Game Objects:");
         g.displayObjects();
@@ -46,12 +46,15 @@ public class GameTestProgram {
         ball.speed = 10;
         ball.direction = 0;
         g.add(ball);
-        player.update();
-        player.update();
-        player.update();
-        ball.update();
-        ball.update();
-        ball.update();
+        for (int i=0; i<20; i++)
+            g.updateObjects();
 
+        System.out.println("\nHere are the Harmful Objects:");
+        Harmful[] dangerousStuff = g.harmfulObjects();
+        for (Harmful d: dangerousStuff)
+            System.out.println(" " + d);
+
+        System.out.println("\nCurrent Danger Assessment:");
+        System.out.println(g.assessDanger());
     }
 }

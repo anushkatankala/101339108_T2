@@ -1,4 +1,4 @@
-public class Ball extends MovableObject {
+public class Ball extends MovableObject implements Harmful {
 
     private boolean 	isBeingHeld;
 
@@ -20,7 +20,12 @@ public class Ball extends MovableObject {
     }
 
     public void draw(){
-        System.out.println("Ball is at " + getLocation() + " facing " + getLocation() + " and moving at " + getSpeed() + " pixels per second." );
+        System.out.println("Ball is at " + getLocation() + " facing " + getDirection() + " degrees and moving at " + getSpeed() + " pixels per second." );
+    }
+
+    @Override
+    public int getDamageAmount(){
+        return -200;
     }
 
     @Override
