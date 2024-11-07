@@ -22,14 +22,14 @@ public class Player extends MovableObject{
     public void setScore(int newScore) { score = newScore; }
 
     public String toString() {
-        String  s =  "Player" + " " + name + " at (" + (int)location.getX() + "," + (int)location.getY() + ") facing " + direction + " degrees";
+        String  s =  "Player " + " " + name + " at (" + (int)location.getX() + "," + (int)location.getY() + ") facing " + direction + " degrees";
         if (hasBall)
             s += " with the ball";
         return s;
     }
 
     public void draw(){
-        System.out.println("Player is at " + getLocation() + " facing " + getDirection() + " degrees and moving at " + getSpeed() + " pixels per second." );
+        System.out.println("Player " + name + " is at " + getLocation() + " facing " + getDirection() + " degrees and moving at " + getSpeed() + " pixels per second." );
     }
 
     @Override

@@ -1,4 +1,4 @@
-public class Wall extends StationaryObject{
+public class Wall extends StationaryObject {
     private int		    width;
     private int		    height;
 

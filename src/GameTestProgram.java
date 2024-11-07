@@ -38,7 +38,7 @@ public class GameTestProgram {
         //g.add(player1);
         //player1.draw();
 
-        Player player = new Player("Red Player", Color.RED, new Point2D(100,100),0);
+        Player player = new Player("Red Person", Color.RED, new Point2D(100,100),0);
         player.speed = 10;
         player.direction = 0;
         g.add(player);

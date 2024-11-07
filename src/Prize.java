@@ -6,9 +6,6 @@ public class Prize extends StationaryObject {
         value = val;
     }
 
-    // The get/set methods
-    public int getValue() { return value; }
-
     public String toString() {
         return "Prize" + " at (" + (int)location.getX() + "," + (int)location.getY() + ") with value " + value;
     }
